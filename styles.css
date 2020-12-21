@@ -1,0 +1,121 @@
+@keyframes disco {
+  from {
+    filter: hue-rotate(0deg);
+  }
+
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  background: 
+    linear-gradient(to bottom, #7cc4dc, #0096ff00) no-repeat top center/100% 50vh,
+    linear-gradient(to bottom, #00000030, #92bae550) no-repeat top center/100% 100% fixed,
+    url(https://www.toptal.com/designers/subtlepatterns/patterns/blue-snow.png) repeat fixed top left/400px;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: #fefefe;
+  font-family: 'Marck Script', cursive;
+}
+
+.site-header {
+  padding: 0.7rem 0;
+  background-color: #00000050;
+  font-family: 'Mystery Quest', cursive;
+}
+
+h1 {
+  font-size: 3.5rem;
+  text-align: center;
+  padding: 0 2rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.instructions {
+  animation: disco 5s linear infinite;
+  padding: 0 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.gifts {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Link */
+.gift-wrapper {
+  position: relative;
+  display: block;
+  height: 200px;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 24px;
+  flex: 1 0;
+}
+
+.gift-wrapper:hover .soul-name,
+.gift-wrapper:focus .soul-name {
+  transform: translateY(60px) scale(1.1);
+  text-shadow: 2px 2px 5px #00000090;
+}
+
+/* Shelf */
+.gift-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 24px;
+  background: linear-gradient(180deg, rgba(42,29,16,1) 2%, rgba(51,34,17,1) 23%, rgba(34,26,26,1) 70%);
+}
+
+.short { flex-basis: 160px; }
+.short .gift{
+  background-image: url('./images/gift3.png');
+  background-size: 150px; 
+}
+
+.medium { flex-basis: 210px; }
+.medium .gift {
+  background-image: url('./images/gift2.png');
+  background-size: 200px; 
+}
+
+.long { flex-basis: 260px; }
+.long .gift {
+  background-image: url('./images/gift1.png');
+  background-size: 250px; 
+}
+
+.gift {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: no-repeat bottom center/contain;
+  height: 100%;
+}
+
+.disco-wrapper {
+  animation: disco 3s linear infinite;
+  height: 100%;
+}
+
+.soul-name {
+  font-size: 2rem;
+  transform: translateY(60px);
+  text-shadow: 1px 1px 3px #00000050;
+  transition: .35s ease-out;
+  transition-property: text-shadow, transform;
+}
