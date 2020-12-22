@@ -28,13 +28,13 @@ const souls = {
   "Richy": '#',
   "RiShia": '#',
   "Sabão": '#',
-  "Szmerykowo": '#',
   "Saphira": '#',
   "Septenebris": '#',
   "Shememily": '#',
   "Sin": '#',
   "Sojka02": '#',
   "Sponi": '#',
+  "Szmerykowo": '#',
   "Van": '#',
 }
 
