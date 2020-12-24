@@ -1,5 +1,5 @@
 const souls = {
-  "alixalyssa": '#',
+  "alixalyssa": 'https://drive.google.com/file/d/1B0ujrb4_5qsvdYBjAtayxDvK_9yZukgW/view?usp=sharing',
   "Arteaxm": '#',
   "Chaotic Jinx": '#',
   "Crackedlouv": '#',
@@ -41,7 +41,7 @@ const souls = {
 const elements = Object.keys(souls).map(function (soulName, index) {
   const link = document.createElement('a');
   link.classList.add('gift-wrapper');
-  link.href = "#" + soulName;
+  link.href = souls[soulName];
   link.innerHTML = '<div class="disco-wrapper"> <div class="gift"> <div class="soul-name">' + soulName + '</div> </div> </div>'
 
   const randomHue = Math.floor(Math.random() * 360);
